@@ -1,0 +1,24 @@
+<div>
+    <nav>
+        <a class="nav" href="profile"> Profile</a>
+        <a class="nav" href="/posts"> Posts</a>
+        <a class="nav" href="admin"> Admin</a>
+        <a class="nav" href="logout" onClick="return confirm('Are you sure you want to log out?')" > Logout</a>        
+    </nav>
+</div>
+<hr>
+
+<h2>Hi {{FirstName}} {{LastName}}! </h2>
+<h3>Username: {{Username}} </h3>
+
+<hr>
+<h3>Posts</h3>
+
+{{#each posts}}
+    <p> {{PostTitle}}</p>
+    <p>{{PostBody}}</p>
+    <p> Deleted: {{Deleted}}</p>
+
+
+{{/each}}
+

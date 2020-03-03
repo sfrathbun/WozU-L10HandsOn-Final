@@ -1,0 +1,37 @@
+<div>
+    <nav>
+        <a class="nav" href="profile"> Profile</a>
+        <a class="nav" href="/posts"> Posts</a>
+        <a class="nav" href="admin"> Admin</a>
+        <a class="nav" href="logout" onClick="return confirm('Are you sure you want to log out?')" > Logout</a>
+    </nav>
+</div>
+<hr>
+
+<h1>Hello Admin!</h1>
+<H2>Here is a list of all of the users</H2>
+
+<table >
+    <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+
+    {{#each users}}
+
+    <tr>
+        <td><a href=" /users/admin/editUser/{{UserId}}" method="GET" >{{FirstName}} {{LastName}}</a></td>
+        <td>{{Username}}</td>
+        <td>{{Email}}</td>
+        
+        <td> <form method="POST" action="/users/admin/editUser/{{UserId}}">
+        <button type="submit"  >Delete User</button>
+        </form>
+        </td>
+    </tr>
+
+    {{/each}}
+</table>
+
+{{!-- onClick="return confirm('Are you sure you want to delete?')" --}}

@@ -1,0 +1,42 @@
+<div>
+    <nav>
+        <a class="nav" href="/users/profile"> Profile</a>
+        <a class="nav" href="/posts"> Posts</a>
+        <a class="nav" href="/users/admin"> Admin</a>
+        <a class="nav" href="/users/logout" onClick="return confirm('Are you sure you want to log out?')" > Logout</a>
+    </nav>
+</div>
+<hr>
+
+<h1>Hello Admin!</h1>
+</br>
+<h2>Here is some specific information about the user</h2>
+
+<ul>
+    <li> User Id: {{UserId}} </li>
+    <li> Username {{Username}} </li></br>
+    <li> First Name: {{FirstName}} </li>
+    <li> Last Name: {{LastName}} </li>
+    <li> Email: {{Email}} </li>
+    <li> Admin: {{Admin}} </li></br>
+    <li> Date Created: {{createdAt}} </li>
+    <li> Last Updated: {{updatedAt}} </li>
+</ul>
+
+<hr>
+
+{{!-- <h2>Here are all of their posts</h2> --}}
+
+{{#each users}}
+<ul>
+    <li> {{PostTitle}} <br>
+         {{PostBody}}
+    </li>
+</ul>
+{{/each}}
+
+
+<form method="POST" action="/users/admin/editUser/{{UserId}}" >
+<button type="submit">Delete User</button>
+</form>
+{{!-- onClick="return confirm('Are you sure you want to delete?')" --}}

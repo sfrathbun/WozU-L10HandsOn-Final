@@ -1,0 +1,56 @@
+<script type="application/javascript">
+  var updatePost = function (id) {
+    console.log(id);
+    var data = {
+      PostTitle: document.getElementById("postTitle").value,
+      PostBody: document.getElementById("postBody").value
+    }
+    fetch("/posts/" + id, {
+      method: "PUT", body: JSON.stringify(data), headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(result => window.location = "/posts");
+  }
+</script>
+
+<div>
+    <nav>
+        <a class="nav" href="/users/profile"> Profile</a>
+        <a class="nav" href="/posts"> Posts</a>
+        <a class="nav" href="/users/admin"> Admin</a>
+        <a class="nav" href="/users/logout" onClick="return confirm('Are you sure you want to log out?')" > Logout</a>
+    </nav>
+</div>
+<hr>
+
+<h2>Edit your post here!</h2>
+
+<div>
+  <label for="postTitle">Title: </label>
+  <input type="text" id="postTitle" name="postTitle" required value={{PostTitle}}>
+
+</div>
+<div>
+  <label for="postBody">Body: </label>
+  <input type="text" id="postBody" name="postBody" required value={{PostBody}}>
+</div>
+<div>
+  <button type="submit" onClick="updatePost({{PostId}})">Submit</button>
+</div>
+
+{{!-- <form method="PUT" action="posts" name="posts" >
+    <div>
+        <label for="PostTitle">Post Name:</label>
+        <input type="text" id="postTitle" name="postTitle" />
+    </div>
+    </br>
+    <div>
+        <label for="PostBody">Post Body:</label>
+        <textarea type="text" id="postBody" name="postBody"></textarea>
+    </div>
+</br>
+    <div>
+        <button method="PUT" action="/posts/{{PostId}}" type="submit">Save</button>
+    </div>
+</form> --}}
+

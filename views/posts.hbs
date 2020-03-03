@@ -1,0 +1,58 @@
+{{!-- <script type="application/javascript">
+  var deletePost = function (id) {
+    console.log(id);
+    fetch("posts/" + id, { method: "delete" }).then(result => window.location = window.location);
+  }
+</script> --}}
+
+<div>
+    <nav>
+        <a class="nav" href="/users/profile"> Profile</a>
+        <a class="nav" href="/posts"> Posts</a>
+        <a class="nav" href="/users/admin"> Admin</a>
+        <a class="nav" href="/users/logout" onClick="return confirm('Are you sure you want to log out?')" > Logout</a>
+    </nav>
+</div>
+<hr>
+
+<br>
+<h2>Create a new post!</h2>
+<form method="POST" action="posts" name="posts" >
+    <div>
+        <label for="PostTitle">Post Name:</label>
+        <input type="text" id="postTitle" name="postTitle" />
+    </div>
+    </br>
+    <div>
+        <label for="PostBody">Post Body:</label>
+        <textarea type="text" id="postBody" name="postBody"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Create Post!</button>
+    </div>
+</form>
+</br>
+<hr>
+
+<h2>Here is a list of all of you posts!</h2>
+{{#each posts}}
+<p>{{PostTitle}}</p>
+<p>{{PostBody}}</p>
+
+
+<form method="POST" action="/posts/{{PostId}}">
+        <button type="submit" >Delete Post</button>
+        </form>
+
+<div>
+<form method="GET" action="/posts/{{PostId}} ">
+        <button type="submit" >Edit Post</button>
+        </form>
+</div>
+
+
+{{/each}}
+
+</br>
+<hr>

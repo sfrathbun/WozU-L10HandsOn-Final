@@ -1,0 +1,107 @@
+
+body {
+  background-color: #65b54da5;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 24px;
+  text-transform:uppercase;
+  padding-bottom: 30px;
+  border: 1px dotted rgb(70, 231, 231);
+}
+
+a {
+  margin: auto;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px .5px rgb(70, 231, 231);
+}
+
+a:hover{
+  color: rgba(116, 125, 142, 0.731);
+}
+
+#header {
+  max-width:500px;
+  border: 1px solid black;
+  margin: 1rem auto;
+  padding-bottom: 15px;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.table {
+  text-align: center;
+}
+
+ label{
+  display:block;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform:uppercase;
+  font-size:16px;
+  text-align:left;
+  padding: 1rem 0 .25rem;
+  color: rgba(47, 72, 161, 0.882);
+  text-align: center;
+
+}
+
+input, textarea, button {
+  width: 60%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: 1px solid slategray;
+  background:rgb(246, 246, 224);
+  font-size:16px;
+  align-items: center;
+}
+input:focus, textarea:focus {
+  background:rgb(137, 95, 95);
+}
+
+button{
+  text-transform:uppercase;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .5s background ease;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px .5px rgb(24, 37, 37);
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 5px #999;
+}
+
+button:hover
+{
+background-color:#385fadc1;
+color: white;
+}
+
+
+
+
+
