@@ -153,9 +153,6 @@ router.get("/admin/editUser/:id", function(req, res, next) {
   }
 });
 
-
-// Answer for final below
-
   // router.delete("/admin/editUser/:id", function(req, res, next) {
   //   let userId = parseInt(req.params.id);
   //   let token = req.cookies.jwt;
